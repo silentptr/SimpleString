@@ -76,7 +76,7 @@ namespace simpstr
         : m_Len(p_Str.m_Len), m_ByteLen(p_Str.m_ByteLen)
         {
             m_Data = new char[m_ByteLen];
-            std::memcpy(m_Data, 0, m_ByteLen);
+            std::memcpy(m_Data, p_Str.m_Data, m_ByteLen);
         }
 
         simple_string(simple_string&& p_Str) noexcept
